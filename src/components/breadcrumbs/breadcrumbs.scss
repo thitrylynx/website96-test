@@ -1,0 +1,20 @@
+@import '../variables';
+.breadcrumb {
+  width: 100%;
+  margin: 50px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: $grayText;
+    &:not(:first-child) {
+      padding: 0 0 0 5px;
+    }
+    &:last-child {
+      color: $baseText;
+      pointer-events: none;
+      pointer-events: none;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import '../variables';
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  li {
+    display: inline-block;
+  }
+}
+
+.active {
+  .pageLink,
+  .pageLink:focus,
+  .pageLink:hover {
+    z-index: 2;
+    color: $white;
+    cursor: default;
+    background-color: $primaryColor;
+    border-color: $primaryColor;
+  }
+}
+
+.disabled {
+  .pageLink {
+    &:focus,
+    &:hover {
+      pointer-events: none;
+      cursor: not-allowed;
+      background-color: $white;
+    }
+  }
+}
+
+.pageLink {
+  position: relative;
+  display: flex;
+  padding: 5px 13px 5px 13px;
+  color: $baseText;
+  text-decoration: none;
+  background-color: $white;
+  border: 1px solid $borderColor;
+  transition: all .6s;
+  &:hover {
+    border-color: $primaryColor;
+  }
+}
+
+.arrowLeft {
+  border: none;
+  &:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    right: 5px;
+    background: url('/assets/images/Arrow-left.png') center 0 no-repeat;
+  }
+}
+
+.arrowRight {
+  border: none;
+  &:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    top: 4px;
+    left: 5px;
+    background: url('/assets/images/Arrow-right.png') center 0 no-repeat;
+  }
+}

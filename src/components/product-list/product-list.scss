@@ -1,0 +1,13 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-grow: 1;
+  margin-top: 20px;
+  box-sizing: border-box;
+  list-style: none;
+  @media (max-width: 680px) {
+    justify-content: center;
+  }
+}

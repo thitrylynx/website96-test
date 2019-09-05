@@ -1,0 +1,34 @@
+@import '../variables';
+.base {
+  width: 177px;
+  height: 46px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 21px;
+  border: 1px solid $primaryColor;
+  box-sizing: border-box;
+  border-radius: 100px;
+  &:active {
+    opacity: .7;
+  }
+}
+
+.red {
+  background-color: $primaryColor;
+  color: $white;
+  &:hover,
+  &:focus {
+    background-color: $white;
+    color: $primaryColor;
+  }
+}
+
+.white {
+  background-color: $white;
+  color: $primaryColor;
+  &:hover,
+  &:focus {
+    background-color: $primaryColor;
+    color: $white;
+  }
+}

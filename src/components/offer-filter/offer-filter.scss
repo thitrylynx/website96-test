@@ -1,0 +1,32 @@
+@import '../variables';
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  align-self: flex-start;
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+}
+
+.collapse {
+  position: relative;
+  top: 10px;
+  border: 0;
+  cursor: pointer;
+  &:active {
+    opacity: 0.5;
+  }
+  background: url('/assets/images/Arrow-up.png') center 0 no-repeat;
+}
+
+.select {
+  width: 100%;
+  margin-top: 20px;
+}

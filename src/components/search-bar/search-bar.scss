@@ -1,0 +1,71 @@
+@import '../variables';
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  &:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    height: 19px;
+    left: 46px;
+    background: url('/assets/images/Loupe.png') center 0 no-repeat;
+    background-size: 16px;
+  }
+}
+
+.searchTerm {
+  width: 100%;
+  border: 1px solid #EAEAEA;
+  border-right: none;
+  padding: 13px 0 14px 56px;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2D2D2D;
+  font-family: 'Montserrat', sans-serif;
+  opacity: 0.5;
+}
+
+.searchButton {
+  position: relative;
+  right: 45px;
+  width: 59px;
+  height: 50px;
+  border: 2px solid $primaryColor;
+  background: $primaryColor;
+  text-align: center;
+  color: $white;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 20px;
+  &:hover {
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      top: 4px;
+      left: 1px;
+      background: url('/assets/images/Arrow-small-right-red.png') center 0 no-repeat;
+    }
+    background: $white;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+  &:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    top: 4px;
+    left: 1px;
+    background: url('/assets/images/Arrow-small-right.png') center 0 no-repeat;
+  }
+}

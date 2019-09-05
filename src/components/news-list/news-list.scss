@@ -1,0 +1,47 @@
+@import '../variables';
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  padding-bottom: 125px;
+  border-right: 1px solid $borderColor;
+  align-self: flex-start;
+  h3 {
+    margin: 0 0 25px 0;
+    font-size: 24px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+}
+
+.inner {
+  margin: 0 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: $primaryColor;
+  line-height: 20px;
+  &:after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    top: 8px;
+    left: 6px;
+    background: url('/assets/images/Arrow-right-red.png') center 0 no-repeat;
+  }
+  &:visited {
+    color: $primaryColor;
+  }
+  &:hover,
+  &:focus {
+    color: lighten($primaryColor, 20%);
+  }
+}

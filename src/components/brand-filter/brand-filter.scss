@@ -1,0 +1,84 @@
+@import '../variables';
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $borderColor;
+  p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+  }
+}
+
+.collapse {
+  position: relative;
+  top: 10px;
+  border: 0;
+  cursor: pointer;
+  &:active {
+    opacity: 0.5;
+  }
+  background: url('/assets/images/Arrow-up.png') center 0 no-repeat;
+}
+
+.centered {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  li {
+    margin: 15px 0;
+  }
+}
+
+.styledCheckbox {
+  position: absolute;
+  opacity: 0;
+  &+label {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      color: $primaryColor;
+    }
+  } // Box
+  &+label:before {
+    content: '';
+    display: inline-block;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    border: 1px solid $borderColor;
+    background: $white;
+  } // Box hover
+  &:hover+label:before {
+    border: 1px solid $primaryColor;
+  } // Box checked
+  &:checked+label:before {
+    background: $primaryColor;
+  } // Box disabled
+  &:disabled+label {
+    color: $grayText;
+    cursor: auto;
+  }
+  &:disabled+label:before {
+    box-shadow: none;
+    background: $white;
+  }
+  &:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    background: $white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 $white, 4px 0 0 $white, 4px -2px 0 $white, 4px -4px 0 $white, 4px -6px 0 $white, 4px -8px 0 $white;
+    transform: rotate(45deg);
+  }
+}

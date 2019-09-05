@@ -1,0 +1,61 @@
+@import '../variables';
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border-top: 1px solid $borderColor;
+  border-bottom: 1px solid $borderColor;
+  font-weight: 600;
+  color: $baseText;
+  @media (max-width: 980px) {
+    display: none;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  width: 1150px;
+  margin: 0 40px;
+}
+
+.additional {
+  position: relative;
+  margin: 16px 25px 0 5%;
+  cursor: pointer;
+  &:before {
+    content: '\2026';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 40px;
+    left: 40px;
+    font-size: 20px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.navItem {
+  position: relative;
+  color: $baseText;
+  margin: 16px 0;
+  &:hover {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 40px;
+      background-color: $primaryColor;
+    }
+  }
+}

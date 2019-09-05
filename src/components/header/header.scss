@@ -1,0 +1,59 @@
+@import '../variables';
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px 0;
+  @media (max-width: 980px) {
+    display: none;
+  }
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  width: 1150px;
+  margin: 0 40px;
+}
+
+.logo {
+  margin-top: 8px;
+  margin-right: 15px;
+}
+
+.phone {
+  margin-top: 19px;
+  color: $baseText;
+  font-size: 18px;
+  line-height: 32px;
+  &:before {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    top: 4px;
+    right: 6px;
+    background: url('/assets/images/Phone.png') center 0 no-repeat;
+  }
+  &:hover {
+    color: $primaryColor;
+    &:before {
+      content: '';
+      position: relative;
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      top: 5px;
+      right: 6px;
+      background: url('/assets/images/Phone-focus.png') center 0 no-repeat;
+    }
+  }
+}
+
+.button {
+  align-self: center;
+  margin-left: 30px;
+  font-weight: 600;
+}
